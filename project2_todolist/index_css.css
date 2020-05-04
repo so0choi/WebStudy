@@ -1,0 +1,62 @@
+body {
+   background-color: darkslateblue;
+    text-align: center;
+    margin:0px;
+}
+
+#menu {
+    margin:10px;
+    text-align:right;
+    background-color : white;
+}
+
+#menu ul {
+  margin:10 0 10 0;
+
+}
+
+#menu ul li {
+    display : inline-block;
+    text-align: center;
+    background-color: darkslateblue;
+    width:100px; 
+    list-style-type: none;
+    margin:7px;
+    font-size:15px;
+}
+
+a {
+    text-decoration:none;
+    color:white;
+}
+
+.square li{
+    box-shadow: 5px 5px gray;
+}
+
+.content {
+    margin:10px;
+    padding-top:5px;
+    background-color: white;
+}
+
+.content ul li {
+    display:inline-block;
+    background-color: darkslateblue;
+    height:100px;
+    width:100px;
+    line-height: 100px; /*한 줄인 경우에만 사용 가능*/
+}
+
+img {
+    width:500px;
+    height:auto;
+    padding-top : 10px;
+    padding-bottom:20px;
+}
+
+footer {
+    margin:10px;
+    background-color: white;
+    color:gray;
+}

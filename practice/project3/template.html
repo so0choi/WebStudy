@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content li{
+            border:1px solid gray;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>template test example</h2>
+    <ul class="content"></ul>
+</body>
+<!--template 숨겨 놓은 script-->
+<script id="template-list-item" type="text/template">
+    <li>
+        <h4>{title}</h4><p>{content}</p><div>{price}</div>
+    </li>
+</script>
+
+<!-- 실제 js코드-->
+<script>
+    var html = document.querySelector("#template-list-item").innerHTML;
+    var ul = document.querySelector("ul");
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load",function(){
+        var data = JSON.parse(oReq.responseText);
+    
+        data.forEach(function(element){
+            var resultHTML = html.replace("{title}",element.title)
+                .replace("{content}",element.content)
+                .replace("{price}",element.price);
+            console.log(resultHTML);
+            ul.innerHTML+=(resultHTML);
+        })
+    });
+    oReq.open("GET","./data.txt")
+    oReq.send();
+    
+</script>
+
+</html>

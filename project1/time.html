@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <title>time</title>
+    <link rel="stylesheet" href="time_css.css">
+</head>
+<body>
+     <nav id="menu">
+        <ul class="square">
+            <li><a href="C:\Users\simc2\Desktop\web\web01\index.html">홈</a></li>
+            <li><a href="C:\Users\simc2\Desktop\web\web01\aboutme.html">자기소개</a></li>
+            <li><a href="C:\Users\simc2\Desktop\web\web01\photo.html">내사진</a></li>
+            <li><a href="C:\Users\simc2\Desktop\web\web01\time.html">몇시예요</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <p id="time-result"></p>
+        <script type="text/javascript">
+        var d = new Date();
+        var currentDate = d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate() +"일";
+        var mm = (d.getMinutes()+1).toString();
+        var currentTime = d.getHours()+":"+ (mm[1]? mm :'0'+ mm[0]);
+        var result = document.getElementById("time-result");
+            result.innerHTML="현재시각<br>" +currentDate+" "+currentTime;
+        </script>
+
+    </div>
+    <footer>
+        simc2644@gmail.com<br>
+        감사합니다 &#x263a;      
+</footer>
+</html>

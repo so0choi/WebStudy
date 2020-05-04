@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>li{list-style:none;}</style>
+    </head>
+    <body>
+        <h1>template using handlerbar</h1>
+        <section class="show"></section>
+        <script type="myTemplate" id="listTemplate">
+            <li>
+             <div>게시자 : {{name}}</div>
+             <div class="content">{{content}}</div>
+             <div>좋아요 갯수 : <span> {{like}} </span></div>
+             <div class="comment">
+               <div>{{comment}}</div>
+             </div>
+          </li>
+        </script>	
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+        <script>
+            var data = {
+                "id" : 88,
+              "name" : "crong",
+              "content" : "새로운글을 올렸어요",
+              "like" : 5, 
+              "comment" : "댓글이다"
+          };
+          
+            var template = document.querySelector("#listTemplate").innerText;
+            //pre-compile
+            var bindTemplate = Handlebars.compile(template); //bindTemplate은 메서드이다. 
+            var resultHTML = bindTemplate(data);
+            console.log(resultHTML);
+            var show = document.querySelector(".show");
+            show.innerHTML = resultHTML;
+        </script>
+    </body>
+    
+</html>

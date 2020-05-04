@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="list_css.css">
+</head>
+<body>
+    <h1 id="title">Welcome to my Guestbook</h1>
+    <hr>
+    <div class="outer">
+    <h4>Leave me some MESSAGES!</h4>
+    <div id="count"># Total number of messages: 7</div><br>
+    <table id="table">
+        <th>No.</th>
+        <th>Writer</th>
+        <th>Date</th>
+        <th>Text</th>
+
+    <tr>
+        <td>1</td>
+        <td>sy</td>
+        <td>2020.04.07</td>
+        <td>hellloooo</td>
+    </tr>
+    <tr class="colored">
+        <td>2</td>
+        <td>sy</td>
+        <td>2020.04.07</td>
+        <td>hellloooo</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>sy</td>
+        <td>2020.04.07</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officia provident, ab fuga blanditiis rem ipsa nihil aperiam nobis quasi ipsam voluptas omnis veniam, porro neque cum illum at minus.</td>
+    </tr>
+
+    </table>
+    <br></div>
+    <hr>
+    <div class="outer">
+    <div class="pages">
+        <a >1</a>
+        <a >2</a>
+</div>
+    <form metho="post" action="write">
+        <div id="input_name">
+    Name: <input type="text" name="name">
+        </div>
+       
+        <textarea name="content" cols="60" rows="6"></textarea>
+        <br>
+        <input type="submit" value="Submit!" id="btn_submit">
+    </form>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align:center;
+            margin-bottom: 100px;
+        }
+        h2,h4{
+        
+            margin:0px;
+        }
+        .tab{
+            width:600px;
+            margin:0px auto;
+        }
+        .tabmenu{
+            background-color: bisque;
+        }
+        .tabmenu>div{
+            display:inline-block;
+            width:140px;
+            margin: 0px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            cursor:pointer;
+        }
+        .content{
+            background-color: antiquewhite;
+            padding:5%;
+        }
+    </style>
+</head>
+<body>
+    <h2>TAB UI TEST</h2>
+    <div class="tab">
+        <div class="tabmenu">
+            <div id="sy">sy</div>
+            <div id="choi">choi</div>
+            <div id="jj">jj</div>
+            <div id="zini">zini</div>
+        </div>
+        <section class="content" id="c">
+            <h4>main page</h4>
+            <p>this is, main!!</p>
+        </section>
+    </div>
+</body>
+<script id="tabcontent" type="my-template">
+        <h4>I am {name}</h4>
+        <p>I like {like}</p>
+</script>
+<script>
+    var savedData ={};
+
+    function makeTemplate(data,clickedName){
+        var html = document.getElementById("tabcontent").innerHTML;
+        for(var i=0,len = data.length;i<len;i++){
+            if(data[i].name === clickedName){
+                resultHTML = html.replace("{name}",data[i].name)
+                            .replace("{like}",data[i].like.join(", "));
+                savedData[clickedName]=resultHTML;
+                break;
+            }
+        }
+        document.querySelector(".content").innerHTML=resultHTML;
+    }
+
+    function sendAjax(url,clickedName){
+        console.log("ajax");
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load",function(){
+            var data = JSON.parse(oReq.responseText);
+            makeTemplate(data,clickedName);
+        })
+        oReq.open("GET",url);
+        oReq.send();
+    }
+    
+    var tabmenu = document.querySelector(".tabmenu");
+    tabmenu.addEventListener("click", function(evt){
+        var clicked = evt.target.innerText;
+        for(key in savedData){
+            if(key==clicked){
+                document.querySelector(".content").innerHTML=savedData[clicked];
+                console.log("exist!");
+                return false;
+            }
+        }
+        sendAjax("./tab_json.txt",evt.target.innerText);
+    });
+
+</script>
+</html>

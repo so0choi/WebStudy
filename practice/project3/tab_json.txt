@@ -1,0 +1,18 @@
+[
+    {
+        "name" : "sy",
+        "like" : ["orange","strawberry"]
+    },
+    {
+        "name" : "choi",
+        "like" : ["blue","red"]
+    },
+    {
+        "name" : "zini",
+        "like" : ["olaf","blueberry"]
+    },
+    {
+        "name" : "jj",
+        "like" : ["go straight","pikachu"]
+    }
+]

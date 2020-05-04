@@ -1,0 +1,17 @@
+li .myphoto{
+    padding:0px;
+    width:600px; height:800px;
+
+}
+li{
+    border:solid black 2px;
+    padding:30px;
+    display:inline-block;
+    background-color: aquamarine;
+}
+ul{
+    text-align: center;
+}
+.log{
+    font-size: 100px;
+}

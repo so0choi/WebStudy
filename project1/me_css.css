@@ -1,0 +1,58 @@
+body {
+    background-color: darkslateblue;
+    margin:0px;
+ }
+ #menu {
+    margin:10px;
+    text-align:right;
+    background-color : white;
+}
+
+#menu ul {
+  margin:10 0 10 0;
+
+}
+
+#menu ul li {
+    display : inline-block;
+    text-align: center;
+    background-color: darkslateblue;
+    width:100px; 
+    list-style-type: none;
+    margin:7px;
+}
+ a {
+     text-decoration:none;
+     color:white;
+ }
+
+ .content{    
+     margin:10px;
+     background-color: white;
+     padding:1px;
+     padding-left:10%;
+     padding-right:10%;
+ }
+
+ a {
+    text-decoration:none;
+    color:white;
+}
+
+.square li{
+    box-shadow: 5px 5px gray;
+}
+.content ul li{
+    list-style-type: none;
+    padding:4px;
+   
+    margin:10px ;
+}
+
+ footer {
+    text-align: center;
+    margin:10px;
+    background-color: white;
+    padding:4px;
+    color:gray;
+}
