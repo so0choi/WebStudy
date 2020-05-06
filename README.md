@@ -2,5 +2,5 @@
 Studying web programming. 
 <hr/>
 * HTML
-* Javascript
-* css
++ Javascript
+- css
