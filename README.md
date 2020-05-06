@@ -1,6 +1,8 @@
 # WebStudy
 Studying web programming. 
 <hr/>
-* HTML
-+ Javascript
-- css
+<ul>
+  <li> HTML</li>
+  <li>Javascript</li>
+  <li>css</li>
+  </ul>
